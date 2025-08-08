@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Route, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
-import { Observable } from 'rxjs';
+import { CanActivate, Router } from '@angular/router';
 
 @Injectable({
  providedIn:'root'
@@ -14,6 +13,7 @@ export class AuthGuard implements CanActivate{
   if(!isloggedIn){
      this.router.navigate(['/login'])//redirected to login if not logged in
      return false;
+  
   }
    return true; // Allow access if logged in
   }

@@ -35,10 +35,9 @@ export class RegisterComponent {
       }
     },
     err => {
-
           console.log('Error:', err.message);
-          alert('Something went wrong. Please try later.');
-        });}
+          alert('Something went wrong. Please try later.'); }
+        );}
 
   }
 
