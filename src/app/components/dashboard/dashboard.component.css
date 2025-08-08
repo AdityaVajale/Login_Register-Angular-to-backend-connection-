@@ -1,0 +1,77 @@
+/* Header / Menu Bar */
+.menu-bar {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 60px 20px 20px; /* extra right padding to avoid overlap */
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.menu-bar h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.menu-bar p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Logout Button */
+.logout-link {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  color: #ffc107;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: transparent;
+  border: 1px solid #ffc107;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.logout-link:hover {
+  background-color: #ffc107;
+  color: #343a40;
+  text-decoration: none;
+}
+
+/* Table Styling */
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 140px; /* space below fixed header */
+  padding: 0 20px;
+}
+
+.styled-table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+  background-color: #dcdcdc;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table th,
+.styled-table td {
+  border: 1px solid #ccc;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.styled-table thead {
+  background-color: #007bff;
+  color: white;
+}
+.table-btn{
+  display: flex;
+  gap: 5px;
+  margin: 3px 0 3px 3;
+}

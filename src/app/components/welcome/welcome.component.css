@@ -1,0 +1,80 @@
+.tag-line{
+  margin: 0;
+  padding: 0;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+
+.welcome-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: rgba(255, 255, 255, 0.2); /* light transparent layer */
+  backdrop-filter:blur(4px);
+  color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.welcome-container h1 {
+  font-size: 20px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.tag-line h1:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* light transparent layer */
+  backdrop-filter:blur(6px); /* blur effect */
+  -webkit-backdrop-filter: blur(6px); /* for Safari */
+  border-radius: 30px;
+  padding: 10px;
+  transition: all 0.7s ease;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  
+}
+
+.button-group a {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.button-group a:hover {
+  /* background-color: #2980b9; */
+   background-color: #0b2a3f;
+}
+
+
+

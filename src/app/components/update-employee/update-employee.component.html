@@ -1,0 +1,32 @@
+<div class="form-container">
+  <form [formGroup]="user" (ngSubmit)="update()" class="form">
+    <h1 class="form-title">Update Employee</h1>
+
+    <div class="form-group">
+      <label for="id" class="form-label">ID:</label>
+      <input type="text" formControlName="id" class="form-input" id="id"/>
+    </div>
+
+    <div class="form-group">
+      <label for="name" class="form-label">Name:</label>
+      <input type="text" formControlName="name" class="form-input" id="name" placeholder="Enter Employee name" />
+      <span *ngIf="user.get('name')?.touched && user.get('name')?.invalid" class="error-text">Invalid username</span>
+    </div>
+
+    <div class="form-group">
+      <label for="password" class="form-label">Password:</label>
+      <input type="password" formControlName="password" class="form-input" id="password" placeholder="Enter password" />
+      <span *ngIf="user.get('password')?.touched && user.get('password')?.invalid" class="error-text">Invalid password</span>
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="form-label">Email ID:</label>
+      <input type="email" formControlName="email" class="form-input" id="email" placeholder="Enter email ID" />
+      <span *ngIf="user.get('email')?.touched && user.get('email')?.invalid" class="error-text">Invalid Email</span>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="submit-btn" [disabled]="!user.valid">Update</button>
+    </div>
+  </form>
+</div>

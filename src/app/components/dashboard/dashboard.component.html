@@ -1,0 +1,35 @@
+
+<!-- Navbar / Header -->
+<nav class="menu-bar">
+  <h1>DasHive</h1>
+  <p>Welcome to Dashboard</p>
+  <button (click)="logout()" class="logout-link">Logout</button>
+</nav>
+
+<!-- Table Container -->
+<div class="table-container">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name |uppercase}}</td>
+        <td>{{ emp.email }}</td>
+        <td>{{ emp.password | maskpassword }}</td>
+        <div class="table-btn">
+        <button class="btn btn-Danger"(click)="deleteEmployee(emp.id)">Delete</button>
+        <button class="btn btn-success" [routerLink]="['/update',emp.id]">Update</button>
+</div>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

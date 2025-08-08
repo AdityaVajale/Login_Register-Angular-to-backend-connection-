@@ -1,7 +1,20 @@
+import { UpdateEmployeeComponent } from './components/update-employee/update-employee.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AuthGuard } from './auth.guard';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:'',component:WelcomeComponent},
+  {path:'home',component:WelcomeComponent},
+  {path:'login',component:LoginComponent},
+  {path:'register',component:RegisterComponent},
+{path:'dashboard',component:DashboardComponent, canActivate: [AuthGuard]},
+{path:'update/:id',component:UpdateEmployeeComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

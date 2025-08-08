@@ -1,0 +1,26 @@
+<img src="assets/images/hero-page.jpg" alt="Welcome Image" style="position: fixed; top: 0; left: 0; width: 100vw; height: 200vh; object-fit: cover; z-index: -1;">
+
+<div class="regform">
+  <form [formGroup]="user" (ngSubmit)="register()">
+    <h1>Register</h1>
+
+    <label>Name:</label>
+    <input type="text" placeholder="Enter Employee name" formControlName="name" />
+    <span *ngIf="user.get('name')?.touched && user.get('name')?.invalid" style="color: red;">Invalid username</span>
+    <br /><br />
+
+    <label>Password:</label>
+    <input type="password" placeholder="Enter password" formControlName="password" />
+    <span *ngIf="user.get('password')?.touched && user.get('password')?.invalid"style="color:red">Invalid password</span>
+    <br /><br />
+
+    <label>Email ID:</label>
+    <input type="email" placeholder="Enter email ID" formControlName="email" />
+        <span *ngIf="user.get('email')?.touched && user.get('email')?.invalid"style="color:red">Invalid Email</span>
+
+    <br /><br />
+
+    <button type="submit" [disabled]="!user.valid">Register</button>
+  </form>
+</div>
+

@@ -1,0 +1,97 @@
+/* 1. Reset everything */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* 2. Make body and html cover full screen without scrolling */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #062b53;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 3. Wrapper (not really needed now, but good for future) */
+.login-wrapper {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  margin: 0;
+  border: 0;
+
+}
+
+/* 4. Login Box */
+.login-box {
+  background-color: rgba(255, 255, 255, 0.1); /* light transparent layer */
+  -webkit-backdrop-filter:blur(6px); /* for Safari */
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  width: 450px;
+
+}
+
+/* 5. Heading */
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #fdfdfd;
+}
+
+/* 6. Labels and Inputs */
+.login-box label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #f5eeee;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.login-box input:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+/* 7. Button */
+.login-box button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #0056b3;
+}
+.login-box a{
+  padding-bottom: 0 10px 20px;
+}
